@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 id="main-heading">Book your seats !!</h2>
+    <button onclick="changeColor(this)">1</button>
+    <button onclick="changeColor(this)">2</button>
+    <button onclick="changeColor(this)">3</button>
+    <button onclick="changeColor(this)">4</button>
+    <button onclick="changeColor(this)">5</button>
+    <button onclick="changeColor(this)">6</button>
+    <button onclick="changeColor(this)">7</button>
+    <button onclick="changeColor(this)">8</button>
+    <button onclick="changeColor(this)">9</button>
+    <button onclick="changeColor(this)">10</button>
+    <h3>Total number of seats booked : <span id="count">0</span></h3>
+    <h3>Total Price : &#8377; <span id="price">0</span></h3>
+    <script>
+      const btn = document.getElementsByTagName("button");
+      const seats = document.getElementById("count");
+      const totalprice = document.getElementById("price");
+
+      let seatsBooked = 0;
+
+      function changeColor(btn) {
+        if (btn.style.backgroundColor === "green") {
+          btn.style.backgroundColor = "";
+          seatsBooked--;
+        } else {
+          btn.style.backgroundColor = "green";
+          seatsBooked++;
+        }
+        seats.innerHTML = seatsBooked;
+        totalprice.innerHTML = seatsBooked * 150;
+      }
+    </script>
+  </body>
+</html>

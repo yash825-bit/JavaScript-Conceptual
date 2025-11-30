@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Card 1</h3>
+        <p>This is card one.</p>
+      </div>
+
+      <div class="card">
+        <h3>Card 2</h3>
+        <p>This is card two.</p>
+      </div>
+
+      <div class="card">
+        <h3>Card 3</h3>
+        <p>This is card three.</p>
+      </div>
+
+      <div class="card">
+        <h3>Card 4</h3>
+        <p>This is card four.</p>
+      </div>
+    </div>
+  </body>
+</html>
